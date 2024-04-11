@@ -36,5 +36,20 @@ for (let i = 0; i < ourTeam.length; i++) {
     console.log("----------------------");
     for (let key in curMember)
     console.log(curMember[key]);
+}
 
+const cardRow = document.getElementById("cards");
+for (let i = 0; i < ourTeam.length; i++) {
+    curMember = ourTeam[i]
+    cardRow.innerHTML += `
+    <div class="col justify-content-center d-flex text-center mb-4">
+    <div class="card" style="width: 18rem;">
+        <img src="./img/${curMember.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${curMember.name}</h5>
+          <p class="card-text">${curMember.profession}</p>
+        </div>
+    </div>
+    </div>
+    `
 }
